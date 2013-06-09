@@ -1,0 +1,55 @@
+
+
+
+错误处理的本地化提示文本和其他本地化文本分开，有利于代码复用及减少错误。
+
+一.使用方法:
+1.拖动加入ErrorManager到工程
+2.#import "RequestErrorHelper.h"
+3.获取对应NSError对象
+- (void)XXXXX
+{
+    int errorCode=4;
+    NSError *error=[RequestErrorHelper errorWithErrorCode:errorCode];    
+    //localizedDescription为本地化的错误提示
+    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                      message:nil
+                                                     delegate:nil
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:@"OK", nil];
+    [alertView show];
+}
+
+
+二.如果要设置NSErroe对象的descriptionKey,failureReasonKey,recoverySuggestionKey齐全，可以如下写法
++(NSError*)errorWithErrorCode:(CARequestErrorCode)errorCode{
+    NSString *descriptionKey=@"CARequestErrorCodeUnknownError_Description";
+    NSString *failureReasonKey=@"CARequestErrorCodeUnknownError_FailureReason";
+    NSString *recoverySuggestionKey=@"CARequestErrorCodeUnknownError_RecoverySuggestion";
+    if (errorCode==CARequestErrorCodeGroupForbidden) {
+        descriptionKey=@"CARequestErrorCodeGroupForbidden_Description";
+        failureReasonKey=@"CARequestErrorCodeGroupForbidden_FailureReason";
+        recoverySuggestionKey=@"CARequestErrorCodeGroupForbidden_RecoverySuggestion";
+    }
+
+    //RequestError的本地化字符串处理
+    NSBundle *requestErrorBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"RequestError" ofType:@"bundle"]];
+
+    //详细描述 NSLocalizedDescriptionKey
+    NSString *description = NSLocalizedStringFromTableInBundle(descriptionKey, @"RequestError", requestErrorBundle, nil);
+
+    //失败原因 NSLocalizedFailureReasonErrorKey
+    NSString *failureReason=NSLocalizedStringFromTableInBundle(failureReasonKey, @"RequestError", requestErrorBundle, nil);
+
+    //恢复建议 NSLocalizedRecoverySuggestionErrorKey
+    NSString *recoverySuggestion=NSLocalizedStringFromTableInBundle(recoverySuggestionKey, @"RequestError", requestErrorBundle, nil);
+
+    NSDictionary *userInfo=[NSDictionary dictionaryWithObjectsAndKeys:
+                            description,NSLocalizedDescriptionKey,
+                            failureReason,NSLocalizedFailureReasonErrorKey,
+                            recoverySuggestion,NSLocalizedRecoverySuggestionErrorKey,
+                            nil];
+
+    NSError *error=[NSError errorWithDomain:CARequestErrorDomain code:errorCode userInfo:userInfo];
+    return error;
+}

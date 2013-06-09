@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "RequestErrorHelper.h"
 @interface ViewController ()
 
 @end
@@ -17,7 +17,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    NSError *error=[RequestErrorHelper errorWithErrorCode:CARequestErrorCodeGroupForbidden];    
+    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                      message:nil
+                                                     delegate:nil
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:@"OK", nil];
+    [alertView show];
 }
 
 - (void)didReceiveMemoryWarning
