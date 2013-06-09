@@ -18,6 +18,8 @@
 		E130345B1761EB4400E3B178 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E130345A1761EB4400E3B178 /* Default-568h@2x.png */; };
 		E130345E1761EB4400E3B178 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E130345D1761EB4400E3B178 /* ViewController.m */; };
 		E13034611761EB4400E3B178 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E130345F1761EB4400E3B178 /* ViewController.xib */; };
+		E130346B1761EB6000E3B178 /* RequestError.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E13034681761EB6000E3B178 /* RequestError.bundle */; };
+		E130346C1761EB6000E3B178 /* RequestErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E130346A1761EB6000E3B178 /* RequestErrorHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		E130345C1761EB4400E3B178 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E130345D1761EB4400E3B178 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E13034601761EB4400E3B178 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		E13034681761EB6000E3B178 /* RequestError.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RequestError.bundle; sourceTree = "<group>"; };
+		E13034691761EB6000E3B178 /* RequestErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestErrorHelper.h; sourceTree = "<group>"; };
+		E130346A1761EB6000E3B178 /* RequestErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestErrorHelper.m; sourceTree = "<group>"; };
+		E130346D1761EB7200E3B178 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				E130345C1761EB4400E3B178 /* ViewController.h */,
 				E130345D1761EB4400E3B178 /* ViewController.m */,
 				E130345F1761EB4400E3B178 /* ViewController.xib */,
+				E13034671761EB6000E3B178 /* ErrorManager */,
 				E130344B1761EB4400E3B178 /* Supporting Files */,
 			);
 			path = ErrorManager;
@@ -105,6 +112,16 @@
 				E130345A1761EB4400E3B178 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E13034671761EB6000E3B178 /* ErrorManager */ = {
+			isa = PBXGroup;
+			children = (
+				E13034681761EB6000E3B178 /* RequestError.bundle */,
+				E13034691761EB6000E3B178 /* RequestErrorHelper.h */,
+				E130346A1761EB6000E3B178 /* RequestErrorHelper.m */,
+			);
+			path = ErrorManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +159,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = E13034381761EB4400E3B178;
 			productRefGroup = E13034421761EB4400E3B178 /* Products */;
@@ -163,6 +181,7 @@
 				E13034591761EB4400E3B178 /* Default@2x.png in Resources */,
 				E130345B1761EB4400E3B178 /* Default-568h@2x.png in Resources */,
 				E13034611761EB4400E3B178 /* ViewController.xib in Resources */,
+				E130346B1761EB6000E3B178 /* RequestError.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +195,7 @@
 				E13034511761EB4400E3B178 /* main.m in Sources */,
 				E13034551761EB4400E3B178 /* AppDelegate.m in Sources */,
 				E130345E1761EB4400E3B178 /* ViewController.m in Sources */,
+				E130346C1761EB6000E3B178 /* RequestErrorHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +206,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E130344E1761EB4400E3B178 /* en */,
+				E130346D1761EB7200E3B178 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -225,7 +246,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -248,7 +269,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
