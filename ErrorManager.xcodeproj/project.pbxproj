@@ -20,6 +20,7 @@
 		E13034611761EB4400E3B178 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E130345F1761EB4400E3B178 /* ViewController.xib */; };
 		E130346B1761EB6000E3B178 /* RequestError.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E13034681761EB6000E3B178 /* RequestError.bundle */; };
 		E130346C1761EB6000E3B178 /* RequestErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E130346A1761EB6000E3B178 /* RequestErrorHelper.m */; };
+		E1818F8017645DC300794C7B /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = E1818F7F17645DC300794C7B /* README.mdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E13034691761EB6000E3B178 /* RequestErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestErrorHelper.h; sourceTree = "<group>"; };
 		E130346A1761EB6000E3B178 /* RequestErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestErrorHelper.m; sourceTree = "<group>"; };
 		E130346D1761EB7200E3B178 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E1818F7F17645DC300794C7B /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +119,10 @@
 		E13034671761EB6000E3B178 /* ErrorManager */ = {
 			isa = PBXGroup;
 			children = (
-				E13034681761EB6000E3B178 /* RequestError.bundle */,
+				E1818F7F17645DC300794C7B /* README.mdown */,
 				E13034691761EB6000E3B178 /* RequestErrorHelper.h */,
 				E130346A1761EB6000E3B178 /* RequestErrorHelper.m */,
+				E13034681761EB6000E3B178 /* RequestError.bundle */,
 			);
 			path = ErrorManager;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				E130345B1761EB4400E3B178 /* Default-568h@2x.png in Resources */,
 				E13034611761EB4400E3B178 /* ViewController.xib in Resources */,
 				E130346B1761EB6000E3B178 /* RequestError.bundle in Resources */,
+				E1818F8017645DC300794C7B /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +321,7 @@
 				E13034661761EB4400E3B178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
