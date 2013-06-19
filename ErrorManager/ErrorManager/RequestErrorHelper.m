@@ -20,8 +20,14 @@ NSString* const CARequestErrorDomain = @"CARequestErrorDomain";//标志错误的
     NSString *descriptionKey=@"CARequestErrorCodeUnknownError";
     if (errorCode==CARequestErrorCodeGroupForbidden) {
         descriptionKey=@"CARequestErrorCodeGroupForbidden";
+    }else if(errorCode==CARequestErrorCodeOther1){
+        descriptionKey=@"CARequestErrorCodeOther1";
+    }else if(errorCode==CARequestErrorCodeOther2){
+        descriptionKey=@"CARequestErrorCodeOther2";
+    }else if(errorCode==CARequestErrorCodeOther3){
+        descriptionKey=@"CARequestErrorCodeOther3";
     }
-        
+    
     //RequestError的本地化字符串处理
     NSBundle *requestErrorBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"RequestError" ofType:@"bundle"]];
     //详细描述 NSLocalizedDescriptionKey

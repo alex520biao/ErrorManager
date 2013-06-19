@@ -18,10 +18,11 @@
  */
 typedef enum _CARequestErrorCode {
     /*CARequestErrorDomain 错误域*/
-    CARequestErrorCodeConnectionFailure = 1, //网络连接不通
-    CARequestErrorCodeASIRequestTimedOut= 2, //访问超时
-    CARequestErrorCodeUnknownError=3,    //未知错误
-    CARequestErrorCodeGroupForbidden= 4,//此群已被封禁
+    CARequestErrorCodeUnknownError=1,    //未知错误
+    CARequestErrorCodeGroupForbidden= 2,//此群已被封禁
+    CARequestErrorCodeOther1= 3,//其他错误1
+    CARequestErrorCodeOther2= 4,//其他错误2
+    CARequestErrorCodeOther3= 5,//其他错误3
 } CARequestErrorCode;
 
 @interface RequestErrorHelper : NSObject

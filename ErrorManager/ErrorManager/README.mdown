@@ -12,7 +12,7 @@
 3.获取对应NSError对象
 - (void)XXXXX
 {
-    int errorCode=4;
+    int errorCode=1;
     NSError *error=[RequestErrorHelper errorWithErrorCode:errorCode];    
     //localizedDescription为本地化的错误提示
     UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:error.localizedDescription
