@@ -2,3 +2,7 @@
 
 "CARequestErrorCodeUnknownError" ="未知错误";
 "CARequestErrorCodeGroupForbidden" = "此群已被封禁";
+"CARequestErrorCodeOther1"="其他错误1";
+"CARequestErrorCodeOther2"="其他错误2";
+"CARequestErrorCodeOther3"="其他错误3";
+

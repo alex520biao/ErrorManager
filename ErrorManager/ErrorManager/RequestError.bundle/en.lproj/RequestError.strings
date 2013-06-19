@@ -2,5 +2,8 @@
 
 "CARequestErrorCodeUnknownError" ="Unknown error";
 "CARequestErrorCodeGroupForbidden" = "GroupForbidden";
+"CARequestErrorCodeOther1"="Other1";
+"CARequestErrorCodeOther2"="Other2";
+"CARequestErrorCodeOther3"="Other3";
 
 
