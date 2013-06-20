@@ -27,7 +27,11 @@ typedef enum _CARequestErrorCode {
 
 @interface RequestError : NSObject
 
+//获取完整错误对象
 +(NSError*)errorWithErrorCode:(CARequestErrorCode)errorCode;
+
+//只获取错误描述文本
++(NSString*)getRequestErrorStrWithCode:(CARequestErrorCode)errCode;
 
 @end
 

@@ -16,6 +16,7 @@
  */
 NSString* const CARequestErrorDomain = @"CARequestErrorDomain";//标志错误的域
 
+//获取完整错误对象
 +(NSError*)errorWithErrorCode:(CARequestErrorCode)errorCode{
     NSString *descriptionKey=@"CARequestErrorCodeUnknownError";
     if (errorCode==CARequestErrorCodeGroupForbidden) {
@@ -35,6 +36,12 @@ NSString* const CARequestErrorDomain = @"CARequestErrorDomain";//标志错误的
     NSDictionary *userInfo=[NSDictionary dictionaryWithObjectsAndKeys:description,NSLocalizedDescriptionKey,nil];
     NSError *error=[NSError errorWithDomain:CARequestErrorDomain code:errorCode userInfo:userInfo];
     return error;
+}
+
+//只获取错误描述文本
++(NSString*)getRequestErrorStrWithCode:(CARequestErrorCode)errCode{
+    NSError *error=[RequestError errorWithErrorCode:errCode];
+    return error.localizedDescription;
 }
 
 
