@@ -6,10 +6,10 @@
 //  Copyright (c) 2013年 com.baidu. All rights reserved.
 //
 
-#import "RequestErrorHelper.h"
+#import "RequestError.h"
 
 
-@implementation RequestErrorHelper
+@implementation RequestError
 
 /*
  错误域（NSInteger）:_domain

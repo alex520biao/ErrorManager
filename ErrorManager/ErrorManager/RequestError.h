@@ -25,7 +25,7 @@ typedef enum _CARequestErrorCode {
     CARequestErrorCodeOther3= 5,//其他错误3
 } CARequestErrorCode;
 
-@interface RequestErrorHelper : NSObject
+@interface RequestError : NSObject
 
 +(NSError*)errorWithErrorCode:(CARequestErrorCode)errorCode;
 

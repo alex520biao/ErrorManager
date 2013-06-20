@@ -19,7 +19,7 @@
 		E130345E1761EB4400E3B178 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E130345D1761EB4400E3B178 /* ViewController.m */; };
 		E13034611761EB4400E3B178 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E130345F1761EB4400E3B178 /* ViewController.xib */; };
 		E130346B1761EB6000E3B178 /* RequestError.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E13034681761EB6000E3B178 /* RequestError.bundle */; };
-		E130346C1761EB6000E3B178 /* RequestErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E130346A1761EB6000E3B178 /* RequestErrorHelper.m */; };
+		E130346C1761EB6000E3B178 /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E130346A1761EB6000E3B178 /* RequestError.m */; };
 		E1818F8017645DC300794C7B /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = E1818F7F17645DC300794C7B /* README.mdown */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,8 @@
 		E130345D1761EB4400E3B178 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E13034601761EB4400E3B178 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		E13034681761EB6000E3B178 /* RequestError.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RequestError.bundle; sourceTree = "<group>"; };
-		E13034691761EB6000E3B178 /* RequestErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestErrorHelper.h; sourceTree = "<group>"; };
-		E130346A1761EB6000E3B178 /* RequestErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestErrorHelper.m; sourceTree = "<group>"; };
+		E13034691761EB6000E3B178 /* RequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestError.h; sourceTree = "<group>"; };
+		E130346A1761EB6000E3B178 /* RequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestError.m; sourceTree = "<group>"; };
 		E130346D1761EB7200E3B178 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		E1818F7F17645DC300794C7B /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				E1818F7F17645DC300794C7B /* README.mdown */,
-				E13034691761EB6000E3B178 /* RequestErrorHelper.h */,
-				E130346A1761EB6000E3B178 /* RequestErrorHelper.m */,
+				E13034691761EB6000E3B178 /* RequestError.h */,
+				E130346A1761EB6000E3B178 /* RequestError.m */,
 				E13034681761EB6000E3B178 /* RequestError.bundle */,
 			);
 			path = ErrorManager;
@@ -199,7 +199,7 @@
 				E13034511761EB4400E3B178 /* main.m in Sources */,
 				E13034551761EB4400E3B178 /* AppDelegate.m in Sources */,
 				E130345E1761EB4400E3B178 /* ViewController.m in Sources */,
-				E130346C1761EB6000E3B178 /* RequestErrorHelper.m in Sources */,
+				E130346C1761EB6000E3B178 /* RequestError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "RequestErrorHelper.h"
+#import "RequestError.h"
 @interface ViewController ()
 
 @end
@@ -29,13 +29,13 @@
 -(IBAction)erroorAction:(UIButton*)btn{
     NSError *error=nil;
     if(btn.tag==0){
-        error=[RequestErrorHelper errorWithErrorCode:CARequestErrorCodeGroupForbidden];
+        error=[RequestError errorWithErrorCode:CARequestErrorCodeGroupForbidden];
     }else if (btn.tag==1){
-        error=[RequestErrorHelper errorWithErrorCode:CARequestErrorCodeOther2];
+        error=[RequestError errorWithErrorCode:CARequestErrorCodeOther2];
     }else if (btn.tag==2){
-        error=[RequestErrorHelper errorWithErrorCode:CARequestErrorCodeOther2];
+        error=[RequestError errorWithErrorCode:CARequestErrorCodeOther2];
     }else if (btn.tag==3){
-        error=[RequestErrorHelper errorWithErrorCode:CARequestErrorCodeOther3];
+        error=[RequestError errorWithErrorCode:CARequestErrorCodeOther3];
     }
     
     
