@@ -1,5 +1,4 @@
 
-
 ###错误处理的本地化提示文本和其他本地化文本分开，有利于代码复用及减少错误。
 ####网络请求的错误基本可以分两类:
 1.网络错误(NetworkRequestErrorDomain), ASIHTTP的错误域  
@@ -7,11 +6,10 @@
 
 ####一.使用方法:  
 1. 拖动加入ErrorManager到工程  
-
-2. 引用头文件
+2. 引用头文件  
 
 		#import "RequestErrorHelper.h"
-	  
+	
 3. 获取对应NSError对象  
 
 		- (void)XXXXX
