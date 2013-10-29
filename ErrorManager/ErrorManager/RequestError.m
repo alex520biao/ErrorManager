@@ -33,6 +33,9 @@ NSString* const CARequestErrorDomain = @"CARequestErrorDomain";//标志错误的
     NSBundle *requestErrorBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"RequestError" ofType:@"bundle"]];
     //详细描述 NSLocalizedDescriptionKey
     NSString *description = NSLocalizedStringFromTableInBundle(descriptionKey, @"RequestError", requestErrorBundle, nil);
+    if ([descriptionKey isEqualToString:@"CARequestErrorCodeUnknownError"]) {
+        description=[description stringByAppendingFormat:@":%d",(int)errorCode];
+    }
     NSDictionary *userInfo=[NSDictionary dictionaryWithObjectsAndKeys:description,NSLocalizedDescriptionKey,nil];
     NSError *error=[NSError errorWithDomain:CARequestErrorDomain code:errorCode userInfo:userInfo];
     return error;
